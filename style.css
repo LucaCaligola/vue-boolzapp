@@ -29,7 +29,8 @@ main {
     background-color: #EAEAEA;
     position: absolute;
     top: 5vh;
-    left: 10vw;    
+    left: 10vw;  
+    display: flex;  
 }
 
 .left-side {
@@ -37,18 +38,39 @@ main {
     height: 100%;
     border-right: 1px solid #D8DBD6;
 }
+.right-side {
+    width: 70%;
+    height: 100%;
+    border-right: 1px solid #D8DBD6;
+}
 
 
 .lower-left {
     background-color: white;
+    height: 90%;
+  
    
 }
 
 .upper-left {
     border-bottom: 1px solid #D8DBD6;
+    background-color: white;
+    height: 10%;
+}
+
+.upper-right {
+    border-bottom: 1px solid #D8DBD6;
+  
 }
 
 .profile-pic img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
+li img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -82,8 +104,8 @@ ul {
 }
 
 #notification-bell i {
-    height: 45px;
-    width: 45px;
+    height: 40x;
+    width: 40px;
     color: #8EDAFC;
     font-size: 1.5rem;
     margin: auto 0.5rem;
@@ -114,16 +136,42 @@ ul {
 
 .cerca-chat {
 
-background-color: #EAEAEA;
 display: flex;
 justify-content: center;
 padding: 5px;
+border-bottom: 1px solid #EAEAEA;
+
 }
+
 .cerca-chat input {
     width: 100%;
-    border: white;
+    border: 1px solid #EAEAEA;
     border-radius: 5px;
     height: 30px;
     background-color: white;
     
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+/* .message span {
+    font-size: 0.75rem;
+} */
+
+.message-content {
+    margin-left: 0.5rem;
+    width: 100%;
+}
+
+.message-content span {
+    font-size: 0.75rem;
+    color: #00000064;
+}
+.orario span {
+    padding-right: 5px;
+    font-size: 0.5rem;
 }

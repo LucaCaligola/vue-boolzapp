@@ -57,15 +57,65 @@
                             </div>
                         </div>
                         <div class="cerca-chat">
-                            <input type="text" placeholder="     &#128269;     Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="  &#128269;     Cerca o inizia una nuova chat">
 
                         </div>
 
+                        <div class="contact-list">
+                            <ul>
+                                <li v-for="(message, index) in contacts" class="message">
+                                
+                                    <img :src="message.avatar" alt="" class="avatar">
+                                    <div class="message-content">
+                                        <div class="flex-space-beetween orario">
+                                            <p>{{ message.name }}</p>
+                                            <span>12.00</span>
+                                        </div>
+                                        <span>
+                                            Ultimo messaggio inviato
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                        </div>
                     </div>
 
                 </div>
 
                 <div class="right-side">
+
+                   <div class="upper-right flex-space-beetween">
+
+                        <div class="profile-pic flex-profile-name">
+                            <img src="img/avatar_1.jpg" alt="{{ contacts[0].name }}">
+                            <p> {{ contacts[0].name }} </p>
+                        </div>
+
+                        <div class="profile-icon">
+                            <ul class="flex-profile-name">
+                                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                                <li><i class="fa-solid fa-paperclip"></i></li>
+                                <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="lower-right">
+                        <div class="chat">
+
+                        </div>
+
+
+                        <div class="text-it">
+
+                        </div>
+
+
+                    </div>
 
                 </div>
 
