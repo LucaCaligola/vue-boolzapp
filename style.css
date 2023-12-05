@@ -48,8 +48,6 @@ main {
 .lower-left {
     background-color: white;
     height: 90%;
-  
-   
 }
 
 .upper-left {
@@ -104,16 +102,16 @@ ul {
 }
 
 #notification-bell i {
-    height: 40x;
-    width: 40px;
+    height: 35x;
+    width: 35px;
     color: #8EDAFC;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: auto 0.5rem;
     background-color: white;
     border: 1px solid white ;
     border-radius: 50%;
     text-align: center;
-    line-height: 45px;
+    line-height: 35px;
 }
 
 
@@ -155,12 +153,10 @@ border-bottom: 1px solid #EAEAEA;
 .message {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+   
 }
 
-/* .message span {
-    font-size: 0.75rem;
-} */
+
 
 .message-content {
     margin-left: 0.5rem;
@@ -174,4 +170,55 @@ border-bottom: 1px solid #EAEAEA;
 .orario span {
     padding-right: 5px;
     font-size: 0.5rem;
+}
+
+
+.lower-right {
+    height: 85%;
+    width: 100%;
+    background-image: url(img/mine.jpg);
+    position: relative;
+}
+
+.my-contact-chat {
+    background-color: white;
+    display: inline-block;
+    padding: 0.8rem 6rem 0.8rem 0.6rem;
+    border-radius: 10px;
+    position: absolute;
+    left: 10%;
+    top: 15%
+}
+
+
+
+.my-chat {
+    background-color: #D5F9BA;
+    display: inline-block;
+    padding: 0.8rem 6rem 0.8rem 0.6rem;
+    border-radius: 10px;
+    position: absolute;
+    right: 10%;
+    top: 5%
+}
+
+.text-it span i {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #B0B0B0;
+}
+
+
+.text-it input {
+    padding: 0.8rem;
+    width: 80%;
+    border-radius: 10px;
+    border: white;
+    
+}
+
+.text-it {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
