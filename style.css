@@ -36,6 +36,7 @@ main {
 .left-side {
     width: 30%;
     height: 100%;
+    background-color: white;
     border-right: 1px solid #D8DBD6;
 }
 .right-side {
@@ -47,13 +48,13 @@ main {
 
 .lower-left {
     background-color: white;
-    height: 90%;
+   
 }
 
 .upper-left {
     border-bottom: 1px solid #D8DBD6;
-    background-color: white;
-    height: 10%;
+    background-color: #E9EAEA;
+    /* height: 10%; */
 }
 
 .upper-right {
@@ -185,9 +186,12 @@ border-bottom: 1px solid #EAEAEA;
     display: inline-block;
     padding: 0.8rem 6rem 0.8rem 0.6rem;
     border-radius: 10px;
-    position: absolute;
-    left: 10%;
-    top: 15%
+    float: left;
+    margin: 0.5rem 2rem .8rem 2rem;
+    margin-right: 4rem;
+    clear: both;
+
+
 }
 
 
@@ -197,9 +201,10 @@ border-bottom: 1px solid #EAEAEA;
     display: inline-block;
     padding: 0.8rem 6rem 0.8rem 0.6rem;
     border-radius: 10px;
-    position: absolute;
-    right: 10%;
-    top: 5%
+    float: right;
+    margin: 0.5rem 2rem .8rem 2rem;
+    margin-left: 4rem;
+    clear: both;
 }
 
 .text-it span i {
@@ -221,4 +226,10 @@ border-bottom: 1px solid #EAEAEA;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.clearflix::after{
+    display: block;
+    clear: both;
+    content:'';
 }
