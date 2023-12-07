@@ -192,14 +192,12 @@ createApp({
         
         newAutomaticAnswer(){
 
-            this.interval = setInterval(() => {this.contacts[this.activeIndex].messages.push({ date: "10/01/2020 16:18:44", message: 'ok', status: 'received'})},1000);
+            this.interval = setTimeout(() => {this.contacts[this.activeIndex].messages.push({ date: "10/01/2020 16:18:44", message: 'ok', status: 'received'})},1000);
             clearInterval()
         },
 
         
-        stop() {
-            clearInterval(this.interval)
-        }
+       
     },
 
     
