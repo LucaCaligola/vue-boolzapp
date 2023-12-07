@@ -6,6 +6,7 @@ createApp({
             newMessage: '',
             interval: null,
             activeIndex: 0,
+            searchQuery: null,
             contacts : [
                 {
                     name: 'Michele',
@@ -186,7 +187,7 @@ createApp({
             this.contacts[this.activeIndex].messages.push({ date: "10/01/2020 16:18:42", message: this.newMessage, status: 'sent'});
             this.newMessage = '';
             this.newAutomaticAnswer();
-            this.stop();
+            
     
         },
         
@@ -200,6 +201,18 @@ createApp({
        
     },
 
+    computed: {
+        resultQuery(){
+          if(this.searchQuery){
+          return this.contacts.filter((item)=>{
+            return this.searchQuery.toLowerCase().split(' ').every(v => item.name.toLowerCase().includes(this.searchQuery))
+          })
+          
+          }else{
+            return this.contacts;
+          }
+        }
+    }
     
 }).mount('#app');
 

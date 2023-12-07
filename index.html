@@ -57,14 +57,14 @@
                             </div>
                         </div>
                         <div class="cerca-chat">
-                            <input type="text" placeholder="  &#128269;     Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="  &#128269;     Cerca o inizia una nuova chat" v-model="searchQuery">
 
                         </div>
 
                         <div class="contact-list">
                             <ul >
-                                <li v-for="(message, index) in contacts" class="message" @click="changeChatTo(index)" :class="(index === activeIndex) ? 'active' : ''">
-                                
+                                <!-- <li v-for="(message, index) in contacts" class="message" @click="changeChatTo(index)" :class="(index === activeIndex) ? 'active' : ''"> -->
+                                <li v-for="(message, index) in resultQuery" class="message" @click="changeChatTo(index)" :class="(index === activeIndex) ? 'active' : ''">
                                     <img :src="message.avatar" alt="message.name" class="avatar">
                                     <div class="message-content">
                                         <div class="flex-space-beetween orario">
