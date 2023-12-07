@@ -116,7 +116,7 @@
 
                         <span><i class="fa-regular fa-face-smile"></i></span>
 
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" v-on:keyup.enter="addNewMessage">
 
                         <span><i class="fa-solid fa-microphone"></i></span>
                     </div>
@@ -142,5 +142,6 @@
 
 
     <script src="script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script> -->
 </body>
 </html>

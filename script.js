@@ -3,6 +3,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newMessage: '',
+            interval: null,
             activeIndex: 0,
             contacts : [
                 {
@@ -175,13 +177,32 @@ createApp({
     methods: {
         changeChatTo(index){
             this.activeIndex = index;
+        },
+
+        addNewMessage(newMessage){
+           
+            console.log(this.newMessage);
+
+            this.contacts[this.activeIndex].messages.push({ date: "10/01/2020 16:18:42", message: this.newMessage, status: 'sent'});
+            this.newMessage = '';
+            this.newAutomaticAnswer();
+            this.stop();
+    
+        },
+        
+        newAutomaticAnswer(){
+
+            this.interval = setInterval(() => {this.contacts[this.activeIndex].messages.push({ date: "10/01/2020 16:18:44", message: 'ok', status: 'received'})},1000);
+            clearInterval()
+        },
+
+        
+        stop() {
+            clearInterval(this.interval)
         }
-        
-        
-
-
     },
 
-    created() {
-    },
+    
 }).mount('#app');
+
+// const DateTime = luxon.DateTime;
